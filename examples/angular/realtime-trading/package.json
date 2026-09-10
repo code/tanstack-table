@@ -10,6 +10,13 @@
     "test:types": "tsc -p tsconfig.app.json --noEmit",
     "test:e2e": "PLAYWRIGHT_TEST_DIR=$PWD/tests/e2e playwright test --config ../../../playwright.config.ts"
   },
+  "nx": {
+    "targets": {
+      "test:e2e": {
+        "parallelism": false
+      }
+    }
+  },
   "private": true,
   "packageManager": "pnpm@11.24.0",
   "dependencies": {

@@ -11,6 +11,13 @@
     "test:types": "tsrx-tsc --noEmit",
     "test:e2e": "PLAYWRIGHT_TEST_DIR=$PWD/tests/e2e playwright test --config ../../../playwright.config.ts"
   },
+  "nx": {
+    "targets": {
+      "test:e2e": {
+        "parallelism": false
+      }
+    }
+  },
   "dependencies": {
     "@tanstack/octane-store": "^0.12.2",
     "@tanstack/octane-table": "^9.2.4",
